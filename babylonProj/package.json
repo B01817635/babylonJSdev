@@ -3,10 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
-    "preview": "vite preview --host"
+    "preview": "vite preview --host",
+    "motion03build": "tsc && vite build motion03",
+    "motion03preview": "vite preview motion03 --host"
   },
   "devDependencies": {
     "typescript": "~5.9.3",
