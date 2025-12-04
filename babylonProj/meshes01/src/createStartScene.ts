@@ -95,7 +95,7 @@ import {
     myMaterial.specularColor = new Color3(0.5, 0.6, 0.87);
     myMaterial.emissiveColor = new Color3(1, 1, 1);
     myMaterial.ambientColor = new Color3(0.23, 0.98, 0.53);
-    myMaterial.ambientTexture = new Texture("./../meshes01/textures/grass.png.jpg", scene);
+    myMaterial.ambientTexture = new Texture("./textures/grass.png.jpg", scene);
     return myMaterial;
   }
   

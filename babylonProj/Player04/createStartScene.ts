@@ -18,6 +18,7 @@ import {
   Color3,
   StandardMaterial,
   Texture,
+  textureSizeIsObject,
 } from "@babylonjs/core";
 
 
@@ -33,6 +34,13 @@ function createGround(scene: Scene) {
     { width: 16, height: 16 },
     scene
   );
+   var texture = new StandardMaterial("reflective", scene);
+  texture.ambientTexture = new Texture(
+    "./assets/glTF/Grass.png",
+    scene
+  );
+
+  ground.material = texture;
   
     // Create a static box shape.
   let groundAggregate = new PhysicsAggregate(ground, PhysicsShapeType.BOX, { mass: 0 }, scene);
@@ -64,7 +72,7 @@ function createBox1(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/wood.jpg",
+    "./assets/glTF/Rocks.jpg",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);
@@ -82,7 +90,7 @@ function createBox2(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/wood.jpg",
+    "./assets/glTF/Rocks.jpg",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);
@@ -98,8 +106,8 @@ function addAssets(scene: Scene) {
   const tree1 = assetsManager.addMeshTask(
     "tree1 task",
     "",
-    "./assets/nature/gltf/",
-    "CommonTree_1.gltf"
+    "./assets/glTF/",
+    "MapleTree_3.gltf"
   );
   tree1.onSuccess = function (task) {
     const root = task.loadedMeshes[0];
@@ -120,8 +128,8 @@ function addAssets(scene: Scene) {
   const tree2 = assetsManager.addMeshTask(
     "tree1 task",
     "",
-    "./assets/nature/gltf/",
-    "CommonTree_2.gltf"
+    "./assets/glTF/",
+    "MapleTree_2.gltf"
   );
   tree2.onSuccess = function (task) {
     task.loadedMeshes[0].position = new Vector3(0, 0, 2);
@@ -134,8 +142,8 @@ function addAssets(scene: Scene) {
   const tree3 = assetsManager.addMeshTask(
     "tree1 task",
     "",
-    "./assets/nature/gltf/",
-    "CommonTree_3.gltf"
+    "./assets/glTF/",
+    "MapleTree_1.gltf"
   );
   tree3.onSuccess = function (task) {
     task.loadedMeshes[0].position = new Vector3(-3, 0, 2);

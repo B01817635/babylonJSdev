@@ -17,7 +17,7 @@ import {
   AnimationPropertiesOverride
 } from "@babylonjs/core";
 
-function backgroundMusic(scene: Scene): Sound{
+/*function backgroundMusic(scene: Scene): Sound{
   let music = new Sound("music", "./assets/audio/arcade-kid.mp3", scene,  null ,
    {
       loop: true,
@@ -33,7 +33,7 @@ function backgroundMusic(scene: Scene): Sound{
     }
 }, { once: true });
   return music;
-}
+}*/
 
 function createGround(scene: Scene) {
   const groundMaterial = new StandardMaterial("groundMaterial");
@@ -102,7 +102,7 @@ function createBox1(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/reflectivity.png",
+    "./assets/textures/wood.jpg",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);
@@ -118,7 +118,7 @@ function createBox2(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/reflectivity.png",
+    "./assets/textures/wood.jpg",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);

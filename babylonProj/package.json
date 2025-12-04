@@ -11,7 +11,15 @@
     "motion03build": "tsc && vite build motion03",
     "motion03preview": "vite preview motion03 --host",
     "villagebuild": "tsc && vite build Village",
-    "villagepreview": "vite preview Village --host"
+    "villagepreview": "vite preview Village --host",
+    "meshes01build": "tsc && vite build meshes01",
+    "meshes01preview": "vite preview meshes01 --host",
+    "multibuild": "tsc && vite build multi",
+    "multipreview": "vite preview multi --host",
+    "player04build": "tsc && vite build player04",
+    "player04preview": "vite preview player04 --host",
+    "collision03build": "tsc && vite build collision03",
+    "collision03preview": "vite preview collision03 --host"
   },
   "devDependencies": {
     "typescript": "~5.9.3",
