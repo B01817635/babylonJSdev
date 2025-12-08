@@ -71,6 +71,21 @@ import {
     });
     return text;
   }
+export function setText(newText: string, index: number){
+  switch(index) {
+    case 1:
+      text1.text = newText;
+      break;
+    case 2:
+      text2.text = newText;
+      break;
+    case 3:
+      text3.text = newText;
+      break;
+    case 4:
+      text4.text = newText;
+      break;
+  }}
 
   export function gui(scene:Scene): void {
     // add a button
@@ -163,27 +178,12 @@ advancedTexture.addControl(grid);
 
 scene.registerBeforeRender(() => {
   // cant get to gui
-  //let mystash = scene.getExternalData("stash") as { [key: string]: string };
-  //try { text1.text = mystash.message; } catch {}
-  //try { text2.text = mystash.x; } catch {}// Desired direction
-  //try { text3.text = mystash.z; } catch {}// Desired direction
+  let mystash = scene.getExternalData("stash") as { [key: string]: string };
+  try { text1.text = mystash.message; } catch {}
+  try { text2.text = mystash.x; } catch {}// Desired direction
+  try { text3.text = mystash.z; } catch {}// Desired direction
   
 });
 }
-export function setText(newText: string, index: number){
-  switch(index) {
-    case 1:
-      text1.text = newText;
-      break;
-    case 2:
-      text2.text = newText;
-      break;
-    case 3:
-      text3.text = newText;
-      break;
-    case 4:
-      text4.text = newText;
-      break;
-  }
-}
+
 
